@@ -1,11 +1,19 @@
 import Home from "./Pages/Home/Home";
-import "./App.css";
+import GlobalStyle from "./Components/Styles/Global.styles";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  light: "light"
+}
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
+    </>
   );
 }
 

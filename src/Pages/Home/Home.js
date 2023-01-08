@@ -1,27 +1,42 @@
 import React from "react";
+import Link from "../../Components/Link";
+import {
+  Banner,
+  ContentBox,
+  Image,
+  Overly,
+} from "../../Components/Styles/Container.styles";
+import { H1, P } from "../../Components/Styles/Element.styles";
 
 const Home = () => {
   return (
-    <main>
-      <header className="header-banner">
-        <section className="header-background">
-          <div className="header-text">
-            <a href="https://styled-components.com/" target="_blank" rel="noreferrer"><img
-              src="/resources/styled-components-light-logo.png"
-              alt="styled-components-logo"
-            /></a>
-            
-            <h1>Styled Components</h1>
-            <p>
-              In the "Styled Components", a component or function is created for
-              providing styles in JavaScript by manipulating HTML tags. No CSS
-              needs to be used here as well as the styles can be easily
-              scalable, reusable and implemented dynamically.
-            </p>
-          </div>
-        </section>
-      </header>
-    </main>
+    <Banner>
+      <Overly>
+        <ContentBox
+          colorLight="hsla(0, 0%, 0%, 0.8)"
+          colorDark="hsla(0, 0%, 100%, 0.8)"
+        >
+          <Link
+            link="https://styled-components.com/"
+            content={
+              <Image
+                srcLight="resources/sc-light-logo.png"
+                srcDark="/resources/sc-dark-logo.png"
+                width="100px"
+                height="100px"
+              />
+            }
+          />
+          <H1>Styled Components</H1>
+          <P>
+            In the "Styled Components", a component or function is created for
+            providing styles in JavaScript by manipulating HTML tags. No CSS
+            needs to be used here as well as the styles can be easily scalable,
+            reusable and implemented dynamically.
+          </P>
+        </ContentBox>
+      </Overly>
+    </Banner>
   );
 };
 
