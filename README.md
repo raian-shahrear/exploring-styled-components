@@ -1,5 +1,3 @@
 # Exploring Styled Components With Simple React Project
 
-Live view: [Create React App](https://github.com/facebook/create-react-app)
-
-
+### Live view: [exploring-react-styled-components.netlify.app](https://exploring-react-styled-components.netlify.app/)
