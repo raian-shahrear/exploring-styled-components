@@ -12,4 +12,12 @@ const P = styled.p`
   font-size: 18px;
 `;
 
-export { H1, P };
+const ThemeToggler = styled.button`
+  background: transparent;
+  border-color: transparent;
+  margin-bottom: 20px;
+  font-size: 48px;
+  color: ${props => props.theme.light ? "hsla(0, 0%, 0%, 0.6)" : "hsla(0, 0%, 100%, 0.4)"};
+`
+
+export { H1, P, ThemeToggler };

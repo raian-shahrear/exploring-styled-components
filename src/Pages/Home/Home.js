@@ -6,9 +6,11 @@ import {
   Image,
   Overly,
 } from "../../Components/Styles/Container.styles";
-import { H1, P } from "../../Components/Styles/Element.styles";
+import { H1, P, ThemeToggler } from "../../Components/Styles/Element.styles";
+import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 
-const Home = () => {
+const Home = ({handleTheme, isDarkTheme}) => {
+
   return (
     <Banner>
       <Overly>
@@ -16,6 +18,11 @@ const Home = () => {
           colorLight="hsla(0, 0%, 0%, 0.8)"
           colorDark="hsla(0, 0%, 100%, 0.8)"
         >
+          <ThemeToggler onClick={handleTheme} >
+            {
+              isDarkTheme ? <BsToggleOn/> : <BsToggleOff/>
+            }
+          </ThemeToggler>
           <Link
             link="https://styled-components.com/"
             content={
